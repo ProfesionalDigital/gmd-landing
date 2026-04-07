@@ -28,12 +28,6 @@ const cards = [
   }
 ];
 
-const badges = [
-  "Registro INVIMA",
-  "Envío nacional",
-  "Garantía directa"
-];
-
 export const HeroSection = () => {
 
   const getColorClasses = (color: string) => {
