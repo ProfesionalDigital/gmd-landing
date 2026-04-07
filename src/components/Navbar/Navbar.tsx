@@ -19,12 +19,7 @@ export const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             {/* Aquí puedes cambiar el logo por el real. Ahora hay un logo estilo placeholder */}
             <a href="#" className="flex items-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg p-1">
-              <div className="w-[3.5rem] h-[3.5rem] bg-brand-500 rounded-xl flex items-center justify-center transform group-hover:-rotate-6 transition-transform duration-300 shadow-md">
-                <span className="text-white font-bold text-xl">GMD</span>
-              </div>
-              <span className="font-bold text-2xl tracking-tight text-navy-800 group-hover:text-brand-500 transition-colors">
-                Impor<span className="text-brand-500 lg:text-navy-800 lg:group-hover:text-brand-500">medical</span>
-              </span>
+              <img className='w-[130px]' src="https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/36b6da51-8c1e-4457-55a5-9da240d08100/public" alt="Logo de marca GMD" />
             </a>
           </div>
 

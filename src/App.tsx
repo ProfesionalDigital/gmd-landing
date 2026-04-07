@@ -2,6 +2,10 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { Ticker } from './components/Ticker';
 import { ProductsCarousel } from './components/ProductsCarousel';
+import { CategoriesSection } from './components/CategoriesSection';
+import { HistorySection } from './components/HistorySection';
+import { CTASection } from './components/CTASection';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +14,10 @@ function App() {
       <HeroSection />
       <Ticker />
       <ProductsCarousel />
+      <CategoriesSection />
+      <HistorySection />
+      <CTASection />
+      <Footer />
     </div>
   )
 }

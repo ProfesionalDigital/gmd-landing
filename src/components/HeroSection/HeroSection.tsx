@@ -70,13 +70,9 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-white py-16 lg:py-24">
-      {/* Fondo decorativo */}
-      <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-brand-100/50 blur-3xl opacity-50 z-0 pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 rounded-full bg-sky-100/50 blur-3xl opacity-50 z-0 pointer-events-none"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="relative w-full overflow-hidden bg-white md:h-[calc(100vh-139px)]">
+      <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="h-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-14">
 
           {/* Columna Izquierda: Textos y Botones */}
           <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
