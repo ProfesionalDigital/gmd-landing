@@ -41,11 +41,12 @@ export const ProductsCarousel = () => {
               id: item.productCode || String(index),
               name: item.productName || 'Producto GMD',
               sku: item.productCode || 'SKU-000',
-              img: "https://www.gmd.com.co/sfsites/c" + item.defaultImage || "",
+              img: item.defaultImage ? `https://www.gmd.com.co/sfsites/c${item.defaultImage}&width=460` : "",
               bgClass: style.bgClass,
               pillClass: style.pillClass,
               category: style.category,
             };
+
           });
           setProducts(mappedProducts);
         }
@@ -117,7 +118,7 @@ export const ProductsCarousel = () => {
                         {/* Imagen Real o Placeholder */}
                         <div className="w-full h-full bg-white rounded-xl shadow-sm flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105 p-4 relative">
                           {product.img ? (
-                            <img src={product.img} alt={product.name} className="w-full h-full object-contain" crossOrigin="anonymous" />
+                            <img src={product.img} alt={product.name} className="w-full h-full object-contain" />
                           ) : (
                             <div className="text-gray-300">
                               <svg className="w-16 h-16 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
