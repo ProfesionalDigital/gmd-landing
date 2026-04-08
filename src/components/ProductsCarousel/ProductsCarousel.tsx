@@ -35,13 +35,14 @@ export const ProductsCarousel = () => {
 
 
         if (Array.isArray(apiData)) {
-          const mappedProducts = apiData.map((item: any, index: number) => {
+          const filteredData = apiData.filter((item: any) => Boolean(item.defaultImage));
+          const mappedProducts = filteredData.map((item: any, index: number) => {
             const style = COLOR_PALETTES[index % COLOR_PALETTES.length];
             return {
               id: item.productCode || String(index),
               name: item.productName || 'Producto GMD',
               sku: item.productCode || 'SKU-000',
-              img: item.defaultImage ? `https://www.gmd.com.co/sfsites/c${item.defaultImage}&width=460` : "",
+              img: `https://www.gmd.com.co/sfsites/c${item.defaultImage}&width=460`,
               bgClass: style.bgClass,
               pillClass: style.pillClass,
               category: style.category,

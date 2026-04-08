@@ -5,35 +5,40 @@ export const CategoriesSection = () => {
       title: "Movilidad y Rehabilitación",
       productsCount: "32 productos",
       img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/d85472e6-b51c-45e9-88b0-b0ee5d8c7a00/public",
+      href: "https://www.gmd.com.co/category/movilidad-y-rehabilitaci%C3%B3n/0ZGU100000002cvOAA"
     },
     {
       id: 2,
       title: "Monitoreo y control de Signos Vitales",
       productsCount: "18 productos",
       img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/cf0d4c6b-a1b6-424f-c643-762458937f00/public",
+      href: "https://www.gmd.com.co/category/monitoreo-y-control-de-signos-vitales/0ZGU100000002ufOAA"
     },
     {
       id: 3,
       title: "Instrumental Médico y dotación profesional",
       productsCount: "45 productos",
       img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/57e65a62-4e66-427d-3ab2-04948a10a900/public",
+      href: "https://www.gmd.com.co/category/instrumental-m%C3%A9dico-y-dotaci%C3%B3n-profesional/0ZGU100000002JZOAY"
     },
     {
       id: 4,
       title: "Cuidado del paciente y vida Diaria",
       productsCount: "28 productos",
       img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/867ec1a9-8ce8-4b80-4d83-779fe652e800/public",
+      href: "https://www.gmd.com.co/category/cuidado-del-paciente-y-vida-diaria/0ZGU1000000028HOAQ"
     },
     {
       id: 5,
       title: "Terapia Respiratoria",
       productsCount: "15 productos",
       img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/63b7089e-9cbc-4ffc-06f7-85bd17716b00/public",
+      href: "https://www.gmd.com.co/category/terapia-respiratoria/0ZGVT00000000BK4AY"
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAFAFA]">
+    <section id="categorias" className="py-16 md:py-24 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Encabezado */}
@@ -54,8 +59,9 @@ export const CategoriesSection = () => {
             const colSpanClass = isTopRow ? "lg:col-span-3" : "lg:col-span-2";
 
             return (
-              <div
+              <a
                 key={category.id}
+                href={category.href}
                 className={`relative group overflow-hidden rounded-[2rem] h-[300px] sm:h-[350px] lg:h-[400px] cursor-pointer shadow-sm hover:shadow-2xl transition-shadow duration-500 bg-white ${colSpanClass}`}
               >
                 {/* Contenedor de Imagen con Efecto Hover Zoom In */}
@@ -97,7 +103,7 @@ export const CategoriesSection = () => {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

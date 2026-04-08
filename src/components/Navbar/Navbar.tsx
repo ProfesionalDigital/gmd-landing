@@ -4,11 +4,29 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Productos', href: '#' },
-    { name: 'Categorías', href: '#' },
-    { name: 'Nosotros', href: '#' },
-    { name: 'Contacto', href: '#' }
+    { name: 'Productos', href: 'https://www.gmd.com.co/category/todos-los-productos/0ZGVT000000004r4AA' },
+    { name: 'Categorías', href: '#categorias' },
+    { name: 'Nosotros', href: 'https://cloud.impormedical.co/IM/Quienes_Somos' },
+    { name: 'Contacto', href: 'https://www.gmd.com.co/contacto' }
   ];
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#') && href.length > 1) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        // Offset for the sticky navbar height (h-20 approx 80px)
+        const yOffset = 0;
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <nav className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gmd-light shadow-sm transition-all duration-300">
@@ -18,7 +36,7 @@ export const Navbar = () => {
           {/* Logo a la Izquierda */}
           <div className="flex-shrink-0 flex items-center">
             {/* Aquí puedes cambiar el logo por el real. Ahora hay un logo estilo placeholder */}
-            <a href="#" className="flex items-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg p-1">
+            <a href="#" onClick={scrollToTop} className="flex items-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg p-1">
               <img className='w-[130px]' src="https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/36b6da51-8c1e-4457-55a5-9da240d08100/public" alt="Logo de marca GMD" />
             </a>
           </div>
@@ -30,6 +48,7 @@ export const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
+                  onClick={(e) => handleScroll(e, item.href)}
                   className="text-navy-600 hover:text-brand-500 font-medium px-4 py-2 rounded-full transition-all duration-300 hover:bg-white hover:shadow-sm relative group text-sm lg:text-base outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
                 >
                   {item.name}
@@ -41,9 +60,12 @@ export const Navbar = () => {
 
           {/* Botón Distribuidores */}
           <div className="hidden md:flex w-[150px] justify-end items-center">
-            <button className="h-[3rem] bg-brand-500 font-semibold hover:bg-brand-600 text-white px-5 py-2.5 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500">
+            <a
+              className="h-[3rem] flex items-center justify-center bg-brand-500 font-semibold hover:bg-brand-600 text-white px-5 py-2.5 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500"
+              href="https://www.gmd.com.co/login"
+            >
               Soy distribuidor
-            </button>
+            </a>
           </div>
 
           {/* Botón Hamburger - Mobile */}
@@ -74,7 +96,10 @@ export const Navbar = () => {
               key={item.name}
               href={item.href}
               className="block px-4 py-3.5 rounded-xl text-base font-semibold text-navy-700 hover:text-brand-500 hover:bg-white hover:shadow-sm transition-all duration-200"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false);
+                handleScroll(e, item.href);
+              }}
               style={{ transitionDelay: `${isOpen ? index * 50 : 0}ms` }}
             >
               {item.name}

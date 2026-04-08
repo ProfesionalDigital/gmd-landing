@@ -82,15 +82,21 @@ export const HeroSection = () => {
 
             {/* Botones */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <button className="flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1">
+              <a
+                className="flex items-center justify-center bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1"
+                href="https://www.gmd.com.co/category/todos-los-productos/0ZGVT000000004r4AA"
+              >
                 Explorar catálogo
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </button>
-              <button className="flex items-center justify-center bg-white hover:bg-gmd-light text-navy-800 border-2 border-navy-100 hover:border-navy-200 px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1">
+              </a>
+              <a
+                className="flex items-center justify-center bg-white hover:bg-gmd-light text-navy-800 border-2 border-navy-100 hover:border-navy-200 px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1"
+                href="https://www.gmd.com.co/contacto"
+              >
                 Quiero ser distribuidor
-              </button>
+              </a>
             </div>
 
             {/* Badges Inferiores */}
