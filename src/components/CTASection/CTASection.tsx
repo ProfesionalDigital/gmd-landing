@@ -29,7 +29,10 @@ export const CTASection = () => {
         </p>
 
         {/* Botón Call To Action con efecto Hover interactivo */}
-        <button className="group flex items-center justify-center bg-white hover:bg-gray-50 text-navy-900 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+        <a
+          className="group flex items-center justify-center bg-white hover:bg-gray-50 text-navy-900 px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+          href="https://www.gmd.com.co/contacto"
+        >
           Quiero ser distribuidor
           <svg
             className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
@@ -40,7 +43,7 @@ export const CTASection = () => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
-        </button>
+        </a>
 
         {/* Viñetas / Footer Informativo inferior */}
         <div className="mt-12 flex flex-wrap justify-center items-center gap-x-8 gap-y-4 md:gap-x-12 text-sm text-teal-100/50 font-medium">

@@ -11,10 +11,10 @@ export const ProductsCarousel = () => {
 
   // Paletas de diseño para mantener la apariencia premium del carousel (dado que el endpoint no retorna categoría ni color)
   const COLOR_PALETTES = [
-    { bgClass: 'bg-navy-900', pillClass: 'bg-white/10 text-white font-semibold backdrop-blur-md border border-white/10', category: 'DESTACADO' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white/10 text-white font-semibold backdrop-blur-md border border-white/10', category: 'DESTACADO' },
     { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'NUEVO' },
-    { bgClass: 'bg-teal-100/50', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'TENDENCIA' },
-    { bgClass: 'bg-[#F7F5F2]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'ESPECIAL' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'TENDENCIA' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'ESPECIAL' },
   ];
 
   useEffect(() => {
@@ -114,7 +114,7 @@ export const ProductsCarousel = () => {
                   <SwiperSlide key={product.id}>
                     <div className="flex flex-col gap-5 group cursor-pointer h-full">
                       {/* Tarjeta de Imagen */}
-                      <div className={`relative w-full aspect-square rounded-[2rem] p-6 lg:p-8 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:-translate-y-1 ${product.bgClass}`}>
+                      <div className={`relative w-full aspect-square rounded-[2rem] p-6 lg:p-8 flex items-center justify-center overflow-hidden transition-transform duration-300 ${product.bgClass}`}>
 
                         {/* Imagen Real o Placeholder */}
                         <div className="w-full h-full bg-white rounded-xl shadow-sm flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105 p-4 relative">

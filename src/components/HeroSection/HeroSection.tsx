@@ -7,23 +7,23 @@ import 'swiper/css/pagination';
 const cards = [
   {
     id: 1,
-    title: "Identificamos oportunidades",
-    description: "Analizamos el mercado y las necesidades de cada población.",
-    color: "teal",
+    title: "Facilitamos el uso en la vida diaria",
+    description: "Diseñamos soluciones que se integran de forma natural al cuerpo y a la rutina.",
+    color: "gray",
     img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/20a1da17-9b15-491f-3c1f-2341827f6b00/public",
   },
   {
     id: 2,
     title: "Desarrollamos soluciones",
     description: "Definimos estándares y producimos bajo nuestras especificaciones.",
-    color: "purple",
+    color: "gray",
     img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/40f57e07-70f9-46e1-c1ec-530afa205900/public",
   },
   {
     id: 3,
     title: "Garantizamos continuidad",
     description: "Red de +1.000 distribuidores y soporte postventa en todo el país.",
-    color: "brand",
+    color: "gray",
     img: "https://imagedelivery.net/3xEh-XSYeJWAvnbRPV3bRg/ee7c24fa-0520-471b-d439-623c83f5eb00/public",
   }
 ];
@@ -72,12 +72,12 @@ export const HeroSection = () => {
           <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-navy-900 leading-[1.15] tracking-tight">
-                Productos de salud con <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-800 to-navy-600">el respaldo que necesitas</span>
+                Soluciones de salud que posibilitan la vida, con <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-800 to-navy-600">el respaldo que necesitas</span>
               </h1>
             </div>
 
             <p className="text-lg md:text-xl text-navy-600 leading-relaxed max-w-2xl font-medium">
-              Acompañamos cada paso de tu proceso, desde el análisis del mercado hasta la entrega, el servicio y la continuidad para operar sin interrupciones.
+              Diseñamos cada producto para responder con precisión, asegurar continuidad y respaldar la práctica clínica y la vida diaria.
             </p>
 
             {/* Botones */}

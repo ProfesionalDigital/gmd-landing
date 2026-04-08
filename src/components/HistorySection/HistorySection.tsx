@@ -138,12 +138,15 @@ export const HistorySection = () => {
             </p>
 
             <div>
-              <button className="flex items-center text-brand-500 hover:text-brand-400 font-bold transition-all duration-300 group mt-4 text-lg">
+              <a
+                className="flex items-center text-brand-500 hover:text-brand-400 font-bold transition-all duration-300 group mt-4 text-lg"
+                href="https://cloud.impormedical.co/IM/Quienes_Somos"
+              >
                 Conoce nuestra historia
                 <svg className="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
 
