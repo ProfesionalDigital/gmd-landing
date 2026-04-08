@@ -14,12 +14,6 @@ const company = [
   { name: 'Registra tu garantía GMD', href: 'https://www.gmd.com.co/registra-tu-garantia-gmd' },
 ];
 
-const contact = [
-  { name: 'ventas@gmd.com.co', href: '#' },
-  { name: '+57 310 254 3669', href: '#' },
-  { name: 'Bogotá, Colombia', href: '#' }
-];
-
 export const Footer = () => {
   return (
     <footer className="bg-[#030914] text-white/70 py-16 lg:py-20 border-t border-white/5">
