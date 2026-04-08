@@ -1,0 +1,5 @@
+{
+    "name": "gmd-landing",
+    "compatibility_date": "2026-04-08",
+    "main": "src/index.ts"
+}
