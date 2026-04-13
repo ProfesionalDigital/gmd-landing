@@ -63,7 +63,7 @@ export const HeroSection = () => {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
-                  {/* Left Column: Big Fixed Hero Text (Spans 7 cols on large screens) */}
+                  {/* Left Column: Big Fixed Hero Text (Spanss 7 cols on large screens) */}
                   <div className="lg:col-span-7 flex flex-col justify-center space-y-6 lg:space-y-8 mt-12 md:mt-0">
                     <div className="space-y-4">
                       <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-white leading-[1.15] tracking-tight text-shadow-sm">
