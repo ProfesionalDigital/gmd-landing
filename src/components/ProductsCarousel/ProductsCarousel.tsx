@@ -9,12 +9,12 @@ export const ProductsCarousel = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Paletas de diseño para mantener la apariencia premium del carousel (dado que el endpoint no retorna categoría ni color)
+  // Paletas de diseño para mantener la apariencia premium del carousel (dado que el endpoint no retorna color)
   const COLOR_PALETTES = [
-    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white/10 text-white font-semibold backdrop-blur-md border border-white/10', category: 'DESTACADO' },
-    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'NUEVO' },
-    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'TENDENCIA' },
-    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100', category: 'ESPECIAL' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100' },
+    { bgClass: 'bg-[#F4F5F6]', pillClass: 'bg-white text-navy-800 font-bold shadow-sm border border-gray-100' },
   ];
 
   useEffect(() => {
@@ -38,14 +38,17 @@ export const ProductsCarousel = () => {
           const filteredData = apiData.filter((item: any) => Boolean(item.defaultImage));
           const mappedProducts = filteredData.map((item: any, index: number) => {
             const style = COLOR_PALETTES[index % COLOR_PALETTES.length];
+            const cleanProductName = (item.productName || 'Producto GMD').replace(/[-.]/g, '');
             return {
               id: item.productCode || String(index),
+              product2Id: item.product2Id || '',
               name: item.productName || 'Producto GMD',
+              cleanProductName: cleanProductName,
               sku: item.productCode || 'SKU-000',
               img: `https://www.gmd.com.co/sfsites/c${item.defaultImage}&width=460`,
               bgClass: style.bgClass,
               pillClass: style.pillClass,
-              category: style.category,
+              category: item.productFamily || 'GENERAL',
             };
 
           });
@@ -112,7 +115,7 @@ export const ProductsCarousel = () => {
               >
                 {products.map((product) => (
                   <SwiperSlide key={product.id}>
-                    <div className="flex flex-col gap-5 group cursor-pointer h-full">
+                    <a href={`https://www.gmd.com.co/product/${product.cleanProductName}/${product.product2Id}`} className="flex flex-col gap-5 group cursor-pointer h-full">
                       {/* Tarjeta de Imagen */}
                       <div className={`relative w-full aspect-square rounded-[2rem] p-6 lg:p-8 flex items-center justify-center overflow-hidden transition-transform duration-300 ${product.bgClass}`}>
 
@@ -142,7 +145,7 @@ export const ProductsCarousel = () => {
                         </h4>
                         <span className="text-xs text-gray-400 font-semibold tracking-wide uppercase">{product.sku}</span>
                       </div>
-                    </div>
+                    </a>
                   </SwiperSlide>
                 ))}
               </Swiper>
