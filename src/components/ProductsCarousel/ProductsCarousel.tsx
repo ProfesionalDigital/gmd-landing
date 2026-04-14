@@ -141,9 +141,9 @@ export const ProductsCarousel = () => {
                       {/* Información del Producto */}
                       <div className="flex flex-col gap-1 px-2">
                         <h4 className="text-lg font-bold text-navy-900 group-hover:text-brand-500 transition-colors line-clamp-1" title={product.name}>
-                          {product.name}
+                          {product.sku}
                         </h4>
-                        <span className="text-xs text-gray-400 font-semibold tracking-wide uppercase">{product.sku}</span>
+                        <span className="text-xs text-gray-400 font-semibold tracking-wide uppercase">{product.name}</span>
                       </div>
                     </a>
                   </SwiperSlide>

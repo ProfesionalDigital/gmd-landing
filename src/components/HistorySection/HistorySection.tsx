@@ -140,7 +140,7 @@ export const HistorySection = () => {
             <div>
               <a
                 className="flex items-center text-brand-500 hover:text-brand-400 font-bold transition-all duration-300 group mt-4 text-lg"
-                href="https://cloud.impormedical.co/IM/Quienes_Somos"
+              // href="https://cloud.impormedical.co/IM/Quienes_Somos"
               >
                 Conoce nuestra historia
                 <svg className="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -172,10 +172,10 @@ export const HistorySection = () => {
             {/* Overlay Oscuro para asegurar que el texto se lea impecable */}
             <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-black/20 z-20 pointer-events-none"></div>
 
-            {/* Badge: Palmira, Colombia (Reemplazando a Bogotá como pediste) */}
+            {/* Badge: Cali, Colombia (Reemplazando a Bogotá como pediste) */}
             <div className="absolute top-6 left-6 px-4 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/20 flex items-center gap-2 z-30">
               <div className="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></div>
-              <span className="text-white text-xs font-semibold tracking-widest">Palmira, Colombia 🇨🇴</span>
+              <span className="text-white text-xs font-semibold tracking-widest">Colombia 🇨🇴</span>
             </div>
 
             {/* Línea de Tiempo Interactiva Abajo */}

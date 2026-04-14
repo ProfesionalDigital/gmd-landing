@@ -48,7 +48,7 @@ export const Footer = () => {
               </a>
               <a href="https://www.tiktok.com/@gmddiagnostic?_r=1&_t=ZS-95XXwRk2lFw" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/80 hover:bg-brand-500 hover:text-white transition-all duration-300">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
                 </svg>
               </a>
             </div>
@@ -69,7 +69,7 @@ export const Footer = () => {
           </div>
 
           {/* Columna 3: Empresa */}
-          <div className="lg:col-span-2 flex flex-col space-y-4">
+          {/* <div className="lg:col-span-2 flex flex-col space-y-4">
             <h4 className="text-white font-bold tracking-[0.2em] text-xs mb-2">EMPRESA</h4>
             <ul className="flex flex-col space-y-3">
               {company.map((item) => (
@@ -80,10 +80,10 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Columna 4: Contacto */}
-          <div className="lg:col-span-3 flex flex-col space-y-4">
+          <div className="w-[350px] lg:col-span-3 flex flex-col space-y-4">
             <h4 className="text-white font-bold tracking-[0.2em] text-xs mb-2">CONTACTO</h4>
             <ul className="flex flex-col space-y-5">
               <li className="flex items-start text-sm font-medium">
@@ -97,7 +97,7 @@ export const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="ml-1">Palmira, Colombia 🇨🇴</span>
+                <span className="ml-1">Cali, Colombia 🇨🇴</span>
               </li>
               <li className="flex items-start text-sm font-medium">
                 <svg className="w-5 h-5 mr-3 text-teal-400/80 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
