@@ -7,11 +7,11 @@ const products = [
 ];
 
 const company = [
-  { name: 'Nosotros', href: 'https://cloud.impormedical.co/IM/Quienes_Somos' },
-  { name: 'Política de privacidad', href: 'https://cloud.impormedical.co/IM/Politica' },
-  { name: 'Política de devoluciones', href: 'https://cloud.impormedical.co/IM/Politica_Devoluciones' },
-  { name: 'Canal de denuncias', href: 'https://cloud.impormedical.co/IM/Denuncia_soborno_fraude' },
-  { name: 'Registra tu garantía GMD', href: 'https://www.gmd.com.co/registra-tu-garantia-gmd' },
+  { name: 'GMDVita', href: 'https://www.gmdvita.com/' },
+  // { name: 'Política de privacidad', href: 'https://cloud.impormedical.co/IM/Politica' },
+  // { name: 'Política de devoluciones', href: 'https://cloud.impormedical.co/IM/Politica_Devoluciones' },
+  // { name: 'Canal de denuncias', href: 'https://cloud.impormedical.co/IM/Denuncia_soborno_fraude' },
+  // { name: 'Registra tu garantía GMD', href: 'https://www.gmd.com.co/registra-tu-garantia-gmd' },
 ];
 
 export const Footer = () => {
@@ -69,7 +69,7 @@ export const Footer = () => {
           </div>
 
           {/* Columna 3: Empresa */}
-          {/* <div className="lg:col-span-2 flex flex-col space-y-4">
+          <div className="lg:col-span-2 flex flex-col space-y-4">
             <h4 className="text-white font-bold tracking-[0.2em] text-xs mb-2">EMPRESA</h4>
             <ul className="flex flex-col space-y-3">
               {company.map((item) => (
@@ -80,7 +80,7 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
 
           {/* Columna 4: Contacto */}
           <div className="w-[350px] lg:col-span-3 flex flex-col space-y-4">
