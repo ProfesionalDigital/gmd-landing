@@ -91,7 +91,7 @@ export const CategoriesSection = () => {
                     {category.title}
                   </h3>
 
-                  <div className="flex items-center text-gray-300 font-medium text-sm md:text-base">
+                  {/* <div className="flex items-center text-gray-300 font-medium text-sm md:text-base">
                     <span>{category.productsCount}</span>
                     <svg
                       className="w-5 h-5 ml-2 opacity-0 -translate-x-4 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-x-0 text-brand-500"
@@ -101,7 +101,7 @@ export const CategoriesSection = () => {
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
               </a>
             );
