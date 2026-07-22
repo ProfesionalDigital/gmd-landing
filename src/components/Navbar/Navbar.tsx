@@ -6,7 +6,7 @@ export const Navbar = () => {
   const navItems = [
     { name: 'Productos', href: 'https://www.gmd.com.co/category/todos-los-productos/0ZGVT000000004r4AA' },
     { name: 'Categorías', href: '#categorias' },
-    { name: 'Nosotros', href: 'https://cloud.impormedical.co/IM/Quienes_Somos' },
+    { name: 'Nosotros', href: 'https://www.gmd.com.co/quienes-somos' },
     { name: 'Contacto', href: 'https://www.gmd.com.co/contacto' }
   ];
 
